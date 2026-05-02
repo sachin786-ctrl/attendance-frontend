@@ -1,6 +1,5 @@
 import useAuth from '@/stores/authStores';
 import React, { useEffect, useState } from 'react'
-import type Attendance from '../attendance/Attendance';
 import { getHistory } from '@/service/authService';
 import type { AttendanceRecord } from '@/models/Attendance';
 

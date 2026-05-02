@@ -3,7 +3,7 @@ import useAuth from '@/stores/authStores';
 import React, { useEffect, useState, useRef } from 'react'
 import { FaClock, FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
 import { toast } from 'sonner';
-import type Attendance from '../attendance/Attendance';
+import type Attendance from '../Attendance/Attendance';
 import type { AttendanceRecord } from '@/models/Attendance';
 
 const TodayAttendance = () => {

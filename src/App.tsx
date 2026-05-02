@@ -16,10 +16,10 @@ import LoginPage from "./pages/auth/LoginPage";
 import SignupPage from "./pages/auth/SignupPage";
 import OauthSuccess from "./pages/private/oauth2/OauthSuccess";
 import Settings from "./pages/private/students/settings/Settings";
-import TodayAttendance from "./pages/private/students/todayAttendance/TodayAttendance";
-import CalendarView from "./pages/private/students/calendarView/CalendarView";
-import Attendance from "./pages/private/students/attendance/Attendance";
-import HistoryTable from "./pages/private/students/historyTable/HistoryTable";
+import TodayAttendance from "./pages/private/students/TodayAttendance/TodayAttendance";
+import CalendarView from "./pages/private/students/CalendarView/CalendarView";
+import Attendance from "./pages/private/students/Attendance/Attendance";
+import HistoryTable from "./pages/private/students/HistoryTable/HistoryTable";
 
 const App = () => {
   const checkLogin = useAuth((state) => state.checkLogin);
