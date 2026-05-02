@@ -2,7 +2,7 @@
  
  // ✅ Signup API
 import instance from "@/config/instance";
-import type { Attendance } from "@/models/Attendance";
+import type { AttendanceRecord } from "@/models/Attendance";
 import type { LoginData } from "@/models/LoginData";
 import type { LoginResponseData } from "@/models/LoginResponseData";
 import type { SignupData } from "@/models/SignupData";
@@ -62,27 +62,27 @@ export const refreshToken = async () => {
 };
 
 export const checkIn = async () => {
-  const response = await instance.post<Attendance>("/attendance/check-in");
+  const response = await instance.post<AttendanceRecord>("/attendance/check-in");
   return response.data;
 };
 
 export const checkOut = async () => {
-  const response = await instance.post<Attendance>("/attendance/check-out");
+  const response = await instance.post<AttendanceRecord>("/attendance/check-out");
   return response.data;
 };
 
 export const getToday = async () => {
-  const response = await instance.get<Attendance>("/attendance/today");
+  const response = await instance.get<AttendanceRecord>("/attendance/today");
   return response.data;
 };
 
 export const getHistory = async () => {
-  const response = await instance.get<Attendance[]>("/attendance/history");
+  const response = await instance.get<AttendanceRecord[]>("/attendance/history");
   return response.data;
 };
 
 export const getMonthly = async (month: number, year: number) => {
-  const response = await instance.get<Attendance[]>("/attendance/monthly", {
+  const response = await instance.get<AttendanceRecord[]>("/attendance/monthly", {
     params: { month, year },
   });
   return response.data;
