@@ -3,12 +3,13 @@ import useAuth from '@/stores/authStores';
 import React, { useEffect, useState, useRef } from 'react'
 import { FaClock, FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
 import { toast } from 'sonner';
-import type Attendance from '../Attendance/Attendance';
+import type Attendance from '../attendance/Attendance';
+import type { AttendanceRecord } from '@/models/Attendance';
 
 const TodayAttendance = () => {
   const user = useAuth((state) => state.user);
 
-  const [attendance, setAttendance] = useState<Attendance | null>(null);
+  const [attendance, setAttendance] = useState<AttendanceRecord | null>(null);
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState(false);
 

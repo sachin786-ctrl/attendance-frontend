@@ -1,4 +1,4 @@
-import type { Attendance } from "@/models/Attendance";
+import type { AttendanceRecord } from "@/models/Attendance";
 import { getHistory } from "@/service/authService";
 import useAuth from "@/stores/authStores";
 import { useEffect, useState } from "react";
@@ -8,7 +8,7 @@ import { useNavigate } from "react-router";
 
 const Attendance = () => {
   const user = useAuth((state) => state.user);
-      const [records, setRecords] = useState<Attendance[]>([]);
+   const [records, setRecords] = useState<AttendanceRecord[]>([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 

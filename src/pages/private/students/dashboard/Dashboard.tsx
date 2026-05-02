@@ -1,4 +1,4 @@
-import type { Attendance } from "@/models/Attendance";
+import type { AttendanceRecord } from "@/models/Attendance";
 import { getHistory } from "@/service/authService";
 import useAuth from "@/stores/authStores";
 import { useEffect, useState } from "react";
@@ -14,7 +14,7 @@ const COLORS = { present: "#322F81", late: "#a78bfa", absent: "#e879f9" };
 
 export const Dashboard = () => {
   const user = useAuth((state) => state.user);
-  const [records, setRecords] = useState<Attendance[]>([]);
+  const [records, setRecords] = useState<AttendanceRecord[]>([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 

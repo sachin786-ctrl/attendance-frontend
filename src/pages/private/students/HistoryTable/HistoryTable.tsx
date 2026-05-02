@@ -1,11 +1,12 @@
 import useAuth from '@/stores/authStores';
 import React, { useEffect, useState } from 'react'
-import type Attendance from '../Attendance/Attendance';
+import type Attendance from '../attendance/Attendance';
 import { getHistory } from '@/service/authService';
+import type { AttendanceRecord } from '@/models/Attendance';
 
 const Projects = () => {
   const user = useAuth((state) => state.user);
-    const [records, setRecords] = useState<Attendance[]>([]);
+    const [records, setRecords] = useState<AttendanceRecord[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

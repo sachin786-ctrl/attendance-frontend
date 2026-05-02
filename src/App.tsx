@@ -14,12 +14,12 @@ import useAuth from "./stores/authStores";
 import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/auth/LoginPage";
 import SignupPage from "./pages/auth/SignupPage";
-import HistoryTable from "./pages/private/students/HistoryTable/HistoryTable";
-import CalendarView from "./pages/private/students/CalendarView/CalendarView";
-import TodayAttendance from "./pages/private/students/TodayAttendance/TodayAttendance";
 import OauthSuccess from "./pages/private/oauth2/OauthSuccess";
-import Attendance from "./pages/private/students/Attendance/Attendance";
 import Settings from "./pages/private/students/settings/Settings";
+import TodayAttendance from "./pages/private/students/todayAttendance/TodayAttendance";
+import CalendarView from "./pages/private/students/calendarView/CalendarView";
+import Attendance from "./pages/private/students/attendance/Attendance";
+import HistoryTable from "./pages/private/students/historyTable/HistoryTable";
 
 const App = () => {
   const checkLogin = useAuth((state) => state.checkLogin);

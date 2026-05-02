@@ -1,14 +1,15 @@
 import useAuth from '@/stores/authStores';
 import React, { useEffect, useState } from 'react'
-import type Attendance from '../Attendance/Attendance';
+import type Attendance from '../attendance/Attendance';
 import { getMonthly } from '@/service/authService';
+import type { AttendanceRecord } from '@/models/Attendance';
 
 const CalendarView = () => {
   const user = useAuth((state) => state.user);
  const today = new Date();
   const [month, setMonth] = useState(today.getMonth() + 1);
   const [year, setYear] = useState(today.getFullYear());
-  const [records, setRecords] = useState<Attendance[]>([]);
+  const [records, setRecords] = useState<AttendanceRecord[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
